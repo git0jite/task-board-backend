@@ -7,7 +7,7 @@ router.get('/boards/:id/tasks', async (req, res) => {
   const query = { boardId: req.params.id };
 
   if (search) {
-    query.title = { $regex: search, $options: 'i' }; // case-insensitive search
+    query.title = { $regex: search, $options: 'i' }; 
   }
 
   const tasks = await require('../models/Task').find(query);

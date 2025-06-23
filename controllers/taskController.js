@@ -18,5 +18,6 @@ exports.updateTask = async (req, res) => {
 
 exports.deleteTask = async (req, res) => {
   await Task.findByIdAndDelete(req.params.id);
+  
   res.sendStatus(204);
 };
